@@ -10,30 +10,30 @@
 <body>
     <div class="container">
         <h2 class="mt-5 text-center">Registration Form</h2>
-        <form id="registrationForm" class="form-container">
+        <form id="registrationForm" class="form-container" onSubmit="validateForm(event)">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
-                <input type="text" class="form-control" id="fullName" required>
+                <input type="text" class="form-control" id="fullName" required onChange="validateFullName()">
                 <small id="fullNameError" class="form-text error"></small>
             </div>
             <div class="form-group">
                 <label for="email">Email ID</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" required onChange="validateEmail()">
                 <small id="emailError" class="form-text error"></small>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="text" class="form-control" id="phone" required>
+                <input type="text" class="form-control" id="phone" required onChange="validatePhone()">
                 <small id="phoneError" class="form-text error"></small>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" required onChange="validatePassword()">
                 <small id="passwordError" class="form-text error"></small>
             </div>
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control" id="confirmPassword" required>
+                <input type="password" class="form-control" id="confirmPassword" required onChange="validateConfirmPassword()">
                 <small id="confirmPasswordError" class="form-text error"></small>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
